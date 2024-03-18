@@ -54,7 +54,79 @@
             </div>
           </div>
         </section>
-        <section class="bg-gray-100 py-12 lg:py-16 xl:py-24 dark:bg-gray-800">
+        {% if visited_books %}
+        <section class="w-full py-12">
+          <div class="mx-auto container px-4">
+            <div class="flex flex-col gap-2 md:gap-4 items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-2 text-center">
+                <h2 class="text-3xl font-bold">Visited Books</h2>
+                <p class="max-w-[600px] text-gray-500 dark:text-gray-400">
+                  Explore the books you've already enjoyed. Click on a title to see more details.
+                </p>
+              </div>
+              <div class="flex space-x-2 overflow-x-auto">
+               {% for book in visited_books %}
+                <div class="flex flex-col  rounded-lg overflow-hidden" data-aos="fade-right">
+                <img
+                  src="{{book.image}}"
+                  width="200"
+                  height="200"
+                  alt="Cover"
+                  class="aspect-auto object-cover object-center rounded-md"/>
+                <div class="p-4 flex-1">
+                  <a
+                    class="font-bold text-lg leading-none text-black break-words	"
+                    href="/Book/{{book.id}}">
+                    {{ book.title }}
+                  </a>
+                  <p class="text-sm text-gray-500">{{book.author}}</p>
+                </div>
+                </div>
+                {% endfor %}
+                
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+        {% endif %}
+        {% if recomended_book %}
+        <section class="w-full py-12">
+          <div class="mx-auto container px-4">
+            <div class="flex flex-col gap-2 md:gap-4 items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-2 text-center">
+                <h2 class="text-3xl font-bold">Recommended Books</h2>
+                <p class="max-w-[600px] text-gray-500 dark:text-gray-400">
+                  Based on your reading history, we think you'll enjoy this book.
+                </p>
+              </div>
+              <div class="flex space-x-2 overflow-x-auto">
+               
+                <div class="flex flex-col  rounded-lg overflow-hidden" data-aos="fade-right">
+                <img
+                  src="{{recomended_book.image}}"
+                  width="200"
+                  height="200"
+                  alt="Cover"
+                  class="aspect-auto object-cover object-center rounded-md"/>
+                <div class="p-4 flex-1">
+                  <a
+                    class="font-bold text-lg leading-none text-black break-words	"
+                    href="/Book/{{recomended_book.id}}">
+                    {{ recomended_book.title }}
+                  </a>
+                  <p class="text-sm text-gray-500">{{recomended_book.author}}</p>
+                </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+        {% endif %}
+                
+        <section class="bg-gray-100 py-12  dark:bg-gray-800">
           <div class="container px-4 grid gap-6 md:gap-8 lg:gap-10">
             <form class="flex items-center justify-end space-x-4" action="/" method="GET">
               <div class="w-64 ">
@@ -99,6 +171,7 @@
               </p>
             </div>
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              
                 {% for book in books %}
                 <div
                 class="flex flex-col rounded-lg overflow-hidden"
