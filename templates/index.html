@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="flex flex-col min-h-screen">
+      <header class="flex items-center h-[60px] border-b px-4 sm:px-6">
+        <div class="flex items-center gap-4" data-aos="fade-down">
+          <a class="flex items-center gap-2 font-semibold" href="/"
+            ><svg
+              class="h-10 w-10"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              height="800px"
+              width="800px"
+              version="1.1"
+              id="Icons"
+              viewBox="0 0 32 32"
+              xml:space="preserve"
+            >
+              <path
+                d="M28.9,9.4C28.9,9.4,28.9,9.4,28.9,9.4C28.9,9.3,29,9.2,29,9.1c0,0,0,0,0-0.1c0,0,0,0,0-0.1c0-0.1,0-0.2,0-0.3c0,0,0,0,0-0.1  c0-0.1-0.1-0.2-0.1-0.3c0,0,0,0,0,0c-0.1-0.1-0.1-0.1-0.2-0.2l-11-7c-0.3-0.2-0.8-0.2-1.1,0l-13,9c0,0-0.1,0.1-0.1,0.1  c0,0,0,0-0.1,0c-0.1,0.1-0.1,0.2-0.2,0.3c0,0,0,0,0,0.1C3,10.8,3,10.9,3,11c0,0,0,0,0,0v6v6c0,0.3,0.2,0.7,0.5,0.8l11,7  c0.2,0.1,0.4,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2l13-9c0.2-0.2,0.4-0.4,0.4-0.7s-0.1-0.6-0.3-0.8c-0.9-0.9-1.1-2.2-0.5-3.4l0.7-1.5  c0-0.1,0.1-0.2,0.1-0.3c0,0,0-0.1,0-0.1c0,0,0,0,0,0c0-0.1,0-0.3-0.1-0.4c0,0,0-0.1,0-0.1c0-0.1-0.1-0.2-0.2-0.3c0,0,0,0,0,0  c-0.9-0.9-1.1-2.2-0.5-3.4L28.9,9.4z M26.6,14.8l-11.6,8L5,16.5v-3.6l9.5,6c0.2,0.1,0.4,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2l10.3-7.1  C25.8,12.8,26,13.8,26.6,14.8z M15,28.8L5,22.5v-3.6l9.5,6c0.2,0.1,0.4,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2l10.3-7.1  c-0.1,1.1,0.1,2.2,0.7,3.1L15,28.8z"
+              /></svg
+            ><span class="sr-only">Home</span></a
+          >
+          <nav class="hidden items-center gap-4 font-bold text-sm lg:flex">
+            好本书
+          </nav>
+        </div>
+      </header>
+      <main class="flex-1">
+        <section class="py-30 md:py-16 xl:py-24">
+          <div
+            class="container px-4 grid gap-6 md:gap-8 lg:gap-10"
+            data-aos="fade-down"
+          >
+            <div class="space-y-2">
+              <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl">
+                Discover new books
+              </h1>
+              <p
+                data-aos="fade-down"
+                class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
+              >
+                Search our library of over 80 books. Enter a title or author to get started.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="bg-gray-100 py-12 lg:py-16 xl:py-24 dark:bg-gray-800">
+          <div class="container px-4 grid gap-6 md:gap-8 lg:gap-10">
+            <form class="flex items-center justify-end space-x-4" action="/" method="GET">
+              <div class="w-64 ">
+                <input
+                	name="q"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  placeholder="Search..."
+                  type="search"
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground w-10 h-10 p-2 hover:bg-black hover:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-6 h-6 text-white"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+            <div class="grid gap-2 md:gap-4">
+              <h2
+                class="text-3xl font-bold tracking-tighter sm:text-4xl text-white"
+              >
+                Featured Books
+              </h2>
+              <p
+                class="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Handpicked by our team. These are the books everyone is talking
+                about.
+              </p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {% for book in books %}
+                <div
+                class="flex flex-col rounded-lg overflow-hidden"
+                data-aos="fade-down">
+                <img
+                  src="{{book.image}}"
+                  width="300"
+                  height="300"
+                  alt="Cover"
+                  class="aspect-[3/4] object-cover object-center rounded-md"/>
+                <div class="p-4 flex-1">
+                  <a
+                    class="font-bold text-lg leading-none text-white"
+                    href="/Book/{{book.id}}">
+                    {{ book.title }}
+                  </a>
+                  <p class="text-sm text-gray-500">{{book.author}}</p>
+                </div>
+              </div>
+                {% endfor %}
+
+              
+              
+              
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
